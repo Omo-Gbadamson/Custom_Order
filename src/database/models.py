@@ -9,7 +9,7 @@ class CustomOrder(db.Document):
     product_category_id = db.StringField(required=True)
     product_sub_category_id = db.StringField()
     gender = db.StringField(choices=[(1,"Male"), (2,"Female")])
-    size = db.StringField()
+    size = db.StringField(choices=[(1,"Small"), (2,"Medium"), (3,"Large"), (4, "XL"), (5, "XXL"), (6, "XXL")])
     created_at = db.DateTimeField(auto_now_add=True, default=datetime.now)
 
     meta ={
